@@ -1,0 +1,3 @@
+docker pull kalilinux/kali-rolling
+docker run -it kalilinux/kali-rolling
+
