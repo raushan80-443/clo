@@ -1,5 +1,5 @@
  apt update
- apt install aircrack-ng -y
+ apt install aircrack-ng 
  apt install wordlists 
  cd usr/share/wordlists/
  gunzip rockyou.txt.gz
