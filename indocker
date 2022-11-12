@@ -2,7 +2,7 @@
  apt install aircrack-ng 
  apt install wordlists
  
- cd usr/share/wordlists/
+ cd /usr/share/wordlists
  gunzip rockyou.txt.gz
 
  git clone https://github.com/raushan102189/clo.git
