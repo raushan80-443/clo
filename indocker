@@ -1,0 +1,13 @@
+ apt update
+ apt install aircrack-ng -y
+ apt install wordlists -y
+ cd usr/share/wordlists/
+ gunzip rockyou.txt.gz
+ apt install git -y
+ git clone https://github.com/raushan102189/clo.git
+ cd clo
+ cp wpa_handshake-07.cap ../
+ cd ..
+ aircrack-ng wpa_handshake-07.cap -w rockyou.txt
+ 
+ 
