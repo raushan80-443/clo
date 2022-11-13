@@ -1,14 +1,11 @@
  apt update
- apt install aircrack-ng 
- apt install wordlists
- 
- cd /usr/share/wordlists
- gunzip rockyou.txt.gz
+ apt install hashcat hcxtools
+ hcxpcapngtool  wpa_handshake* test.22000
 
- git clone https://github.com/raushan102189/clo.git
- cd clo
- cp wpa_handshake-07.cap ../
- cd ..
- aircrack-ng wpa_handshake-07.cap -w rockyou.txt
- 
+chmod +x *
+git clone https://github.com/danielmiessler/SecLists.git
+cp test.22000 SecLists/Passwords
+
+ cd SecLists/Passwords
+ #hash hashcat -m 22000 -w 4 -d 1  test.22000  darkweb2017-top10000.txt 
  
