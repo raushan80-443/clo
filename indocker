@@ -6,8 +6,13 @@ cd clo
 hcxpcapngtool  wpa_handshake-07.cap -o test.22000
 chmod +777 *
 git clone https://github.com/danielmiessler/SecLists.git 
-cp test.22000 SecLists/Passwords
+cp test.22000  all.py SecLists/Passwords
 
  cd SecLists/Passwords
- #hash hashcat -m 22000 -w 4 -d 1  test.22000  darkweb2017-top10000.txt 
+
+ python3 all.py
+ chmod +777 all
+ ./all
+
+ # hashcat -m 22000 -w 4 -d 1  test.22000  darkweb2017-top10000.txt 
  
