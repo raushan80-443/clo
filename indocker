@@ -3,7 +3,7 @@
  apt install hashcat hcxtools git
 git clone https://github.com/raushan102189/clo.git
 cd clo
-hcxpcapngtool  wpa_handshake-07.cap -o test.22000
+hcxpcapngtool  wpa_handshake-20.cap -o test.22000
 chmod +777 *
 git clone https://github.com/danielmiessler/SecLists.git 
 cp test.22000  all.py SecLists/Passwords
