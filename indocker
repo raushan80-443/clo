@@ -12,6 +12,13 @@ tar -xf rockyou.txt.tar
 git clone https://github.com/danielmiessler/SecLists.git 
 cp test.22000  all.py SecLists/Passwords/Leaked-Databases
 cd SecLists/Passwords/Leaked-Databases
+gunzip rockyou.txt.tar.gz
+tar -xf rockyou.txt.tar 
+hashcat   -m 22000 -w 4 -d 1  test.22000  rockyou.txt 
+
+
+
+
  python3 all.py
  chmod +777 all
  ./all

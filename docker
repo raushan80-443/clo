@@ -1,3 +1,5 @@
 docker pull kalilinux/kali-rolling
 docker run -it kalilinux/kali-rolling
 
+docker pull sundowndev/phoneinfoga
+docker run -it sundowndev/phoneinfoga
